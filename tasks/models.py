@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User  # импортируем модель пользователя
 
 class Task(models.Model):
     PRIORITY_CHOICES = [
@@ -7,6 +7,8 @@ class Task(models.Model):
         ("M", "Medium"),
         ("H", "High"),
     ]
+
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)  # добавляем поле владельца задачи
 
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
