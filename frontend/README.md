@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# ToDo List с авторизацией и сохранением задач
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Простой и функциональный ToDo-лист с поддержкой авторизации, тегов, приоритетов, дедлайнов и drag'n'drop сортировки задач.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Технологии
 
-### `npm start`
+- Backend: Django 5.2, Django REST Framework  
+- Авторизация: JWT (JSON Web Token)  
+- Frontend: React (планируется)  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Функционал
 
-### `npm test`
+- Регистрация и вход пользователей (JWT)  
+- Создание, редактирование и удаление задач  
+- Привязка задач к пользователям (каждый видит только свои задачи)  
+- Теги для задач (несколько тегов на задачу)  
+- Приоритеты задач (низкий, средний, высокий)  
+- Дедлайны с указанием даты и времени  
+- Пометка задач как выполненных  
+- Drag'n'drop сортировка задач в списке  
+- REST API для интеграции с фронтендом или другими клиентами  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Установка и запуск
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Клонируйте репозиторий:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`bash
+git clone https://github.com/yourusername/mytodo.git
+cd mytodo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Создайте и активируйте виртуальное окружение:
 
-### `npm run eject`
+На Windows:
+python -m venv venv
+venv\Scripts\activate
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+На macOS/Linux:
+python3 -m venv venv
+source venv/bin/activate
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Установите зависимости:
+pip install -r requirements.txt
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Выполните миграции базы данных:
+python manage.py migrate
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. Запустите сервер разработки:
+python manage.py runserver
 
-## Learn More
+6. Откройте в браузере:
+http://127.0.0.1:8000/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Использование API
+1. Регистрация и авторизация с помощью JWT
+2. Получение списка задач (только своих)
+3. Создание, обновление, удаление задач через REST-запросы
+4. Работа с тегами, приоритетами, дедлайнами
 
-### Code Splitting
+Для тестирования API можно использовать Postman или расширение REST Client в VS Code.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Планы по развитию
+1. Полноценный React фронтенд с удобным UI
+2. Фильтрация и поиск задач
+3. Уведомления о дедлайнах
+4. Тесты для backend
+5. Деплой на удалённый сервер (Heroku, DigitalOcean и т.п.)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Автор
+## Дмитрий Тращенко
+## Mail: setworldspawn@gmail.com|dmitriy.trashchenko@mail.ru
+## GitHub: https://github.com/dmitriytrashchenko
