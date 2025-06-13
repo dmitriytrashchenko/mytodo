@@ -1,9 +1,15 @@
 INSTALLED_APPS = [
     "django.contrib.admin",
+    "django.contrib.admin",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
     "rest_framework",
     "djoser",
     "corsheaders",
     "todo",
+    "tasks",  # Добавили инсталированые apps
 ]
 
 MIDDLEWARE = [
