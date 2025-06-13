@@ -1,0 +1,36 @@
+### Регистрация пользователя
+POST http://127.0.0.1:8000/api/register/
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "12345678"
+}
+
+### Получение JWT токена
+POST http://127.0.0.1:8000/api/token/
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "12345678"
+}
+
+### Получение задач (авторизованный доступ)
+GET http://127.0.0.1:8000/api/tasks/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ5NzgyODUyLCJpYXQiOjE3NDk3NzkyNTIsImp0aSI6IjU0ZWQ0ZmJmYzEwYzQzNDg4OTdlM2U2MGZiZGIwNDczIiwidXNlcl9pZCI6Mn0.KhAonq5GxXPssnNG-EBXS51HhggzMLXHu7Th9RXLtv8
+
+### Создать новую задачу
+POST http://127.0.0.1:8000/api/tasks/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ5NzgyODUyLCJpYXQiOjE3NDk3NzkyNTIsImp0aSI6IjU0ZWQ0ZmJmYzEwYzQzNDg4OTdlM2U2MGZiZGIwNDczIiwidXNlcl9pZCI6Mn0.KhAonq5GxXPssnNG-EBXS51HhggzMLXHu7Th9RXLtv8
+Content-Type: application/json
+
+{
+  "title": "Моя новая задача",
+  "description": "Описание задачи",
+  "tags": "важное, работа",
+  "priority": "M",
+  "deadline": "2025-06-20T12:00:00Z",
+  "completed": false,
+  "order": 1
+}
