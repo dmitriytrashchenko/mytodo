@@ -3,8 +3,8 @@ POST http://127.0.0.1:8000/api/register/
 Content-Type: application/json
 
 {
-  "username": "testuser",
-  "password": "12345678"
+  "username": "lord0miker",
+  "password": "123123"
 }
 
 ### Получение JWT токена
@@ -12,8 +12,8 @@ POST http://127.0.0.1:8000/api/token/
 Content-Type: application/json
 
 {
-  "username": "testuser",
-  "password": "12345678"
+  "username": "lord0miker",
+  "password": "123123"
 }
 
 ### Получение задач (авторизованный доступ)
